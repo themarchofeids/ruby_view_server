@@ -1,8 +1,8 @@
 require 'erb'
 
-x = 42
-template = ERB.new "The value of x is: <%= x %>"
-puts template.result(binding)
+# x = 42
+# template = ERB.new "The value of x is: <%= x %>"
+# puts template.result(binding)
 
 y = 42*42
 test = ERB.new "The value of y is: <%= y %>"
