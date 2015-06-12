@@ -4,9 +4,23 @@
 <h2>Change is good. </h2>
 
 
-<h1>Name</h1>
+<h2>Fruits</h2>
 <ul>
   <% ['apples', 'oranges', 'bananas'].each do |fruit| %>
     <li>I like to eat <%= fruit %></li>
+  <% end %>
+</ul>
+
+<h2>Institutional Affiliations</h2>
+<ul>
+  <%['Litchfield High School', 'Carleton College', 'University of California Berkeley'].each do |school| %>
+    <li><%= school %></li>
+  <% end %>
+</ul>
+
+<h2>Cities</h2>
+<ul>
+  <%['Litchfield, MN', 'Northfield, MN', 'Washington, D.C.', 'Berkeley, CA', 'San Francisco, CA'].each do |city| %>
+    <li><%= city %></li>
   <% end %>
 </ul>

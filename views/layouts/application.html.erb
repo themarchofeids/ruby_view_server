@@ -1,11 +1,17 @@
+  <%
+    def link_to(name, url) 
+        return "<a href='#{url}'>#{name}</a>"
+     end
+    %>
+
 <html>
   <body>
-    <h1>You're using a layout</h1>
+    <h1>Jonathan Everett Dille's Layout</h1>
     <p>
-      <h3> I'm a header</h3>
-      <p>Put things in the header</p>
-      <a href='me.html'>Me</a>
-
+      <h3>Personal Website</h3> #sub header
+      <p>My name is Jonathan Everett Dille. Until recently, my name was Jonathan Dille Eidsvaag, a subtle but personally important change.
+      I hope you enjoy this website. There isn't much to it yet, but I'm working on it.</p> 
+      <%= link_to('@theMarchofEids', 'https://twitter.com/theMarchofEids') %> 
     </p>
     <hr />
     <div>
@@ -13,8 +19,8 @@
     </div>
     <hr />
     <div>
-      <h3> I'm a footer</h3>
-      <p>Put things in the footer</p>
+      <h3> Thanks for Stopping By!</h3> 
+      <p>See you next time.</p>
     </div>
   </body>
 </html>
