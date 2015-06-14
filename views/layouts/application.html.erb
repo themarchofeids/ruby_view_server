@@ -4,15 +4,29 @@
      end
     %>
 
+
+
+    
 <html>
   <body>
     <h1>Jonathan Everett Dille's Layout</h1>
     <p>
-      <h3>Personal Website</h3> #sub header
+      <h3>Personal Website</h3> 
       <p>My name is Jonathan Everett Dille. Until recently, my name was Jonathan Dille Eidsvaag, a subtle but personally important change.
       I hope you enjoy this website. There isn't much to it yet, but I'm working on it.</p> 
       <%= link_to('@theMarchofEids', 'https://twitter.com/theMarchofEids') %> 
     </p>
+<form method='post' action="<%= @request.path %>">
+        First name: <input type="text" name="first_name" placeholder='first name'/><br />
+        <input type="submit" value="Submit" />
+        
+        
+          <% if @request.query['first_name'] && !@request.query['first_name'].empty? %>
+    Hello there <%= @request.query['first_name'] %>
+  <% else %>
+    Enter thy name
+  <% end %>
+    </form>
     <hr />
     <div>
       <%= yield %>
@@ -22,7 +36,8 @@
       <h3> Thanks for Stopping By!</h3> 
       <p>See you next time.</p>
       <%= link_to('@linkedin', 'https://www.linkedin.com/pub/jonathan-dille-eidsvaag/12/36b/a9a') %> 
-      
+      <%= link_to('@theMarchofEids', 'https://twitter.com/theMarchofEids') %>
+      <%= link_to('Google', 'https://google.com') %>
     </div>
   </body>
 </html>
